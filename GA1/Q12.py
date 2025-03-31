@@ -2,7 +2,9 @@ import os, json, io, pandas as pd, zipfile, re
 from bs4 import BeautifulSoup
 
 def execute(question: str, parameter, file_bytes=None):
-    file = io.BytesIO(file_bytes) if file_bytes else None
+    if not file_bytes:
+        return "No file provided"
+    file = io.BytesIO(file_bytes)
     sum = process_unicode_data(file, question)
     return sum
 

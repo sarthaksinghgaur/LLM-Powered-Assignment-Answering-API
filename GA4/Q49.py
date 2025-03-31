@@ -11,7 +11,8 @@ def execute(question: str, parameter, file_bytes):
         pdf_bytes = file_bytes
         pdf_file = io.BytesIO(pdf_bytes)
         
-        df = extract_data_from_pdf_tabula(pdf_file)
+        #df = extract_data_from_pdf_tabula(pdf_file)
+        df = extract_data_from_pdf(pdf_file)
         #df.to_csv("data.csv", index=False)
         subject1, marks, subject2, marks_range = get_parameters(question)
         

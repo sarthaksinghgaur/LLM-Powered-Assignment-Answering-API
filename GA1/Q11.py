@@ -1,7 +1,9 @@
 import os, json, io
 from bs4 import BeautifulSoup
 
-def execute(question: str, parameter, file_bytes):
+def execute(question: str, parameter, file_bytes: None):
+    if not file_bytes:
+        return "No file provided"
     sum = sum_data_values(file_bytes, parameter['css_class_name'])
     return sum
         

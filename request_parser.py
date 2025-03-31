@@ -89,6 +89,14 @@ use_cases = {
     "GA5.10": [ "digital", "forensics", "analyst", "Understand the Mapping", "Reassemble the Image", "Output the Reconstructed Image", "scramble" ],
 }
 
+pattern_usecase = {
+    "GA1.1": r"^What is the output of code -s\?$",
+    "GA1.2": r".*What is the JSON output of the command\?.*",
+    "GA1.3": r"^What is the output of the command$",
+    "GA1.6": r"^What is the value in the hidden input$",
+    "GA1.8": r'^What is the value in the "([^"]+)" column of the CSV file$',
+}
+
 def extract_using_regex(text):
     """
     Extracts parameters dynamically using regex patterns.
@@ -110,6 +118,12 @@ def extract_using_regex(text):
                 extracted[param] = matches.group()
     return extracted
 
+def identify_use_case_pattern(text):
+    for case_id, pattern in pattern_usecase.items():
+        if re.match(pattern, text, re.IGNORECASE):
+            return case_id
+    return "-1"
+
 def identify_use_case(text):
     for case_id, keywords in use_cases.items():
         if all(keyword.lower() in text.lower() for keyword in keywords):
@@ -120,7 +134,7 @@ def extract_info(text):
     """
     Extracts use case ID and parameters from input text.
     """
-    case_id = identify_use_case(text)
+    case_id = identify_use_case(text)    
     regex_params = extract_using_regex(text)
     #parse_params = extract_using_parse(text, case_id)
 

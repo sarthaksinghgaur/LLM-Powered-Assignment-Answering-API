@@ -36,9 +36,10 @@ def move_and_rename_files(file):
                 dst = os.path.join(expected_dir, new_name)
                 shutil.move(src, dst)
 
+        
         # 3. Run: grep . * | LC_ALL=C sort | sha256sum
         result = subprocess.check_output(
-            "grep . * | LC_ALL=C sort | sha256sum",
+            "/usr/bin/grep . * | LC_ALL=C /usr/bin/sort | /usr/bin/sha256sum",
             shell=True,
             cwd=expected_dir
         ).decode().strip()
@@ -58,3 +59,15 @@ def transform_digit(c):
 
 def rename_digits(name):
     return ''.join(transform_digit(c) if c.isdigit() else c for c in name)
+
+def get_directory_hash(directory):
+    lines = []
+    for filename in sorted(os.listdir(directory)):
+        if os.path.isfile(os.path.join(directory, filename)):
+            with open(os.path.join(directory, filename), 'rb') as f:
+                content = f.read()
+            lines.append(f"{filename}: {content}")
+    
+    # Join all content and hash it
+    all_content = '\n'.join(lines).encode('utf-8')
+    return hashlib.sha256(all_content).hexdigest()

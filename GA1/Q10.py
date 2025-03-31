@@ -21,7 +21,7 @@ def execute(question: str, parameter, file_bytes):
     #         data[key] = value
     json_string = json.dumps(data, sort_keys=True)
     json_hash = hashlib.sha256(json_string.encode("utf-8")).hexdigest()
-    return hash_object(json_string), json_hash, data
+    return hash_object(json_string)
     # json_output, hash_output = convert_and_hash(file_bytes)
     # return hash_output, json_output
 
