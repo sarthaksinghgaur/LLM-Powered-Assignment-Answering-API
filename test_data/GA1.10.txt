@@ -1,0 +1,3 @@
+Download q-multi-cursor-json.txt and use multi-cursors and convert it into a single JSON object, where key=value pairs are converted into {key: value, key: value, ...}.
+
+What's the result when you paste the JSON at tools-in-data-science.pages.dev/jsonhash and click the Hash button?

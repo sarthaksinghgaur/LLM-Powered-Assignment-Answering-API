@@ -1,0 +1,12 @@
+Create a GitHub action on one of your GitHub repositories. Make sure one of the steps in the action has a name that contains your email address 23f2004837@ds.study.iitm.ac.in. For example:
+
+
+jobs:
+  test:
+    steps:
+      - name: 23f2004837@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
+      
+Trigger the action and make sure it is the most recent action.
+
+What is your repository URL? It will look like: https://github.com/USER/REPO

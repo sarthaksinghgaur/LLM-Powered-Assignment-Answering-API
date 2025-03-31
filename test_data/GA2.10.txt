@@ -1,0 +1,5 @@
+Download Llamafile. Run the Llama-3.2-1B-Instruct.Q6_K.llamafile model with it.
+
+Create a tunnel to the Llamafile server using ngrok.
+
+What is the ngrok URL? It might look like: https://[random].ngrok-free.app/

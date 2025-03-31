@@ -1,0 +1,28 @@
+ReceiptRevive Analytics is a data recovery and business intelligence firm specializing in processing legacy sales data from paper receipts. Many of the client companies have archives of receipts from past years, which have been digitized using OCR (Optical Character Recognition) techniques. However, due to the condition of some receipts (e.g., torn, faded, or partially damaged), the OCR process sometimes produces incomplete JSON data. These imperfections can lead to truncated fields or missing values, which complicates the process of data aggregation and analysis.
+
+One of ReceiptRevive’s major clients, RetailFlow Inc., operates numerous brick-and-mortar stores and has an extensive archive of old receipts. RetailFlow Inc. needs to recover total sales information from a subset of these digitized receipts to analyze historical sales performance. The provided JSON data contains 100 rows, with each row representing a sales entry. Each entry is expected to include four keys:
+
+city: The city where the sale was made.
+product: The product that was sold.
+sales: The number of units sold (or sales revenue).
+id: A unique identifier for the receipt.
+Due to damage to some receipts during the digitization process, the JSON entries are truncated at the end, and the id field is missing. Despite this, RetailFlow Inc. is primarily interested in the aggregate sales value.
+
+Your Task
+As a data recovery analyst at ReceiptRevive Analytics, your task is to develop a program that will:
+
+Parse the Sales Data:
+Read the provided JSON file containing 100 rows of sales data. Despite the truncated data (specifically the missing id), you must accurately extract the sales figures from each row.
+Data Validation and Cleanup:
+Ensure that the data is properly handled even if some fields are incomplete. Since the id is missing for some entries, your focus will be solely on the sales values.
+Calculate Total Sales:
+Sum the sales values across all 100 rows to provide a single aggregate figure that represents the total sales recorded.
+By successfully recovering and aggregating the sales data, ReceiptRevive Analytics will enable RetailFlow Inc. to:
+
+Reconstruct Historical Sales Data: Gain insights into past sales performance even when original receipts are damaged.
+Inform Business Decisions: Use the recovered data to understand sales trends, adjust inventory, and plan future promotions.
+Enhance Data Recovery Processes: Improve methods for handling imperfect OCR data, reducing future data loss and increasing data accuracy.
+Build Client Trust: Demonstrate the ability to extract valuable insights from challenging datasets, thereby reinforcing client confidence in ReceiptRevive's services.
+Download the data from q-parse-partial-json.jsonl
+
+What is the total sales value?

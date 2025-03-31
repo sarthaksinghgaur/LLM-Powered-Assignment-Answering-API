@@ -1,0 +1,31 @@
+StreamFlix is a rapidly growing streaming service aiming to provide a diverse and high-quality library of movies, TV shows, etc. to its subscribers. To maintain a competitive edge and ensure customer satisfaction, StreamFlix invests heavily in data-driven content curation. By analyzing movie ratings and other key metrics, the company seeks to identify films that align with subscriber preferences and emerging viewing trends.
+
+With millions of titles available on platforms like IMDb, manually sifting through titles to select suitable additions to StreamFlix's catalog is both time-consuming and inefficient. To streamline this process, StreamFlix's data analytics team requires an automated solution to extract and analyze movie data based on specific rating criteria.
+
+Develop a Python program that interacts with IMDb's dataset to extract detailed information about titles within a specified rating range. The extracted data should include the movie's unique ID, title, release year, and rating. This information will be used to inform content acquisition decisions, ensuring that StreamFlix consistently offers high-quality and well-received films to its audience.
+
+Imagine you are a data analyst at StreamFlix, responsible for expanding the platform's movie library. Your task is to identify titles that have received favorable ratings on IMDb, ensuring that the selected titles meet the company's quality standards and resonate with subscribers.
+
+To achieve this, you need to:
+
+Extract Data: Retrieve movie information from IMDb for all films that have a rating between 6 and 8.
+Format Data: Structure the extracted information into a JSON format containing the following fields:
+id: The unique identifier for the movie on IMDb.
+title: The official title of the movie.
+year: The year the movie was released.
+rating: The IMDb user rating for the movie.
+Your Task
+Source: Utilize IMDb's advanced web search at https://www.imdb.com/search/title/ to access movie data.
+Filter: Filter all titles with a rating between 6 and 8.
+Format: For up to the first 25 titles, extract the necessary details: ID, title, year, and rating. The ID of the movie is the part of the URL after tt in the href attribute. For example, tt10078772. Organize the data into a JSON structure as follows:
+
+[
+  { "id": "tt1234567", "title": "Movie 1", "year": "2021", "rating": "5.8" },
+  { "id": "tt7654321", "title": "Movie 2", "year": "2019", "rating": "6.2" },
+  // ... more titles
+]
+Submit: Submit the JSON data in the text box below.
+Impact
+By completing this assignment, you'll simulate a key component of a streaming service's content acquisition strategy. Your work will enable StreamFlix to make informed decisions about which titles to license, ensuring that their catalog remains both diverse and aligned with subscriber preferences. This, in turn, contributes to improved customer satisfaction and retention, driving the company's growth and success in a competitive market.
+
+What is the JSON data?

@@ -1,0 +1,3 @@
+Create and push an image to Docker Hub. Add a tag named 23f2004837 to the image.
+
+What is the Docker image URL? It should look like: https://hub.docker.com/repository/docker/$USER/$REPO/general

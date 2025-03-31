@@ -1,0 +1,5 @@
+Running uv run --with httpie -- https [URL] installs the Python package httpie and sends a HTTPS request to the URL.
+
+Send a HTTPS request to https://httpbin.org/get with the URL encoded parameter email set to 23f2004837@ds.study.iitm.ac.in
+
+What is the JSON output of the command? (Paste only the JSON body, not the headers)

@@ -1,0 +1,18 @@
+Let's make sure you can access Google Colab. Run this program on Google Colab, allowing all required access to your email ID: 23f2004837@ds.study.iitm.ac.in.
+
+import hashlib
+import requests
+from google.colab import auth
+from oauth2client.client import GoogleCredentials
+
+auth.authenticate_user()
+creds = GoogleCredentials.get_application_default()
+token = creds.get_access_token().access_token
+response = requests.get(
+  "https://www.googleapis.com/oauth2/v1/userinfo",
+  params={"alt": "json"},
+  headers={"Authorization": f"Bearer {token}"}
+)
+email = response.json()["email"]
+hashlib.sha256(f"{email} {creds.token_expiry.year}".encode()).hexdigest()[-5:]
+What is the result? (It should be a 5-character string)

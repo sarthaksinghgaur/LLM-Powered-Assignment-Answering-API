@@ -1,0 +1,29 @@
+EduAnalytics Corp. is a leading educational technology company that partners with schools and educational institutions to provide data-driven insights into student performance. By leveraging advanced analytics and reporting tools, EduAnalytics helps educators identify trends, improve teaching strategies, and enhance overall student outcomes. One of their key offerings is the Performance Insight Dashboard, which aggregates and analyzes student marks across various subjects and demographic groups.
+
+EduAnalytics has recently onboarded Greenwood High School, a large educational institution aiming to optimize its teaching methods and improve student performance in core subjects. Greenwood High School conducts annual assessments in multiple subjects, and the results are compiled into detailed PDF reports each semester. However, manually extracting and analyzing this data is time-consuming and prone to errors, especially given the volume of data and the need for timely insights.
+
+To address this, EduAnalytics plans to automate the data extraction and analysis process, enabling Greenwood High School to receive precise and actionable reports without the delays associated with manual processing.
+
+As part of this initiative, you are a data analyst at EduAnalytics assigned to develop a module that processes PDF reports containing student marks. Each PDF, named in the format xxx.pdf, includes a comprehensive table listing student performances across various subjects, along with their respective groups.
+
+Greenwood High School has specific analytical needs, such as:
+
+Subject Performance Analysis: Understanding how students perform in different subjects to identify areas needing improvement.
+Group-Based Insights: Analyzing performance across different student groups to ensure equitable educational support.
+Threshold-Based Reporting: Focusing on students who meet or exceed certain performance thresholds to tailor advanced programs or interventions.
+Your Task
+This file, q-extract-tables-from-pdf.pdf contains a table of student marks in Maths, Physics, English, Economics, and Biology.
+
+Calculate the total Economics marks of students who scored 56 or more marks in Maths in groups 53-86 (including both groups).
+
+Data Extraction:: Retrieve the PDF file containing the student marks table and use PDF parsing libraries (e.g., Tabula, Camelot, or PyPDF2) to accurately extract the table data into a workable format (e.g., CSV, Excel, or a DataFrame).
+Data Cleaning and Preparation: Convert marks to numerical data types to facilitate accurate calculations.
+Data Filtering: Identify students who have scored marks between 56 and Maths in groups 53-86 (including both groups).
+Calculation: Sum the marks of the filtered students to obtain the total marks for this specific cohort.
+By automating the extraction and analysis of student marks, EduAnalytics empowers Greenwood High School to make informed decisions swiftly. This capability enables the school to:
+
+Identify Performance Trends: Quickly spot areas where students excel or need additional support.
+Allocate Resources Effectively: Direct teaching resources and interventions to groups and subjects that require attention.
+Enhance Reporting Efficiency: Reduce the time and effort spent on manual data processing, allowing educators to focus more on teaching and student engagement.
+Support Data-Driven Strategies: Use accurate and timely data to shape educational strategies and improve overall student outcomes.
+What is the total Economics marks of students who scored 56 or more marks in Maths in groups 53-86 (including both groups)?

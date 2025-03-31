@@ -1,0 +1,26 @@
+GlobalRetail Insights is a market research and analytics firm specializing in providing data-driven insights for multinational retail companies. Their clients rely on accurate, detailed sales reports to make strategic decisions regarding product placement, inventory management, and marketing campaigns. However, the quality of these insights depends on the reliability of the underlying sales data.
+
+One major challenge GlobalRetail faces is the inconsistent recording of city names in sales data. Due to human error and regional differences, city names can be mis-spelt (e.g., "Tokio" instead of "Tokyo"). This inconsistency complicates the process of aggregating sales data by city, which is crucial for identifying regional trends and opportunities.
+
+GlobalRetail Insights recently received a dataset named q-clean-up-sales-data.json from one of its large retail clients. The dataset consists of 2,500 sales entries, each containing the following fields:
+
+city: The city where the sale was made. Note that city names may be mis-spelt phonetically (e.g., "Tokio" instead of "Tokyo").
+product: The product sold. This field is consistently spelled.
+sales: The number of units sold.
+The client's goal is to evaluate the performance of a specific product across various regions. However, due to the mis-spelled city names, directly aggregating sales by city would lead to fragmented and misleading insights.
+
+Your Task
+As a data analyst at GlobalRetail Insights, you are tasked with extracting meaningful insights from this dataset. Specifically, you need to:
+
+Group Mis-spelt City Names: Use phonetic clustering algorithms to group together entries that refer to the same city despite variations in spelling. For instance, cluster "Tokyo" and "Tokio" as one.
+Filter Sales Entries: Select all entries where:
+The product sold is Gloves.
+The number of units sold is at least 7.
+Aggregate Sales by City: After clustering city names, group the filtered sales entries by city and calculate the total units sold for each city.
+By performing this analysis, GlobalRetail Insights will be able to:
+
+Improve Data Accuracy: Correct mis-spellings and inconsistencies in the dataset, leading to more reliable insights.
+Target Marketing Efforts: Identify high-performing regions for the specific product, enabling targeted promotional strategies.
+Optimize Inventory Management: Ensure that inventory allocations reflect the true demand in each region, reducing wastage and stockouts.
+Drive Strategic Decision-Making: Provide actionable intelligence to clients that supports strategic planning and competitive advantage in the market.
+How many units of Gloves were sold in Guangzhou on transactions with at least 7 units?

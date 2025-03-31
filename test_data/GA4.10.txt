@@ -1,0 +1,24 @@
+EduDocs Inc. is a leading provider of educational resources and documentation management solutions for academic institutions. With a growing client base comprising universities, colleges, and online learning platforms, EduDocs emphasizes the importance of accessible, well-formatted digital documentation. To maintain high standards and streamline their content delivery, EduDocs continually seeks to enhance its documentation workflows and ensure consistency across all materials.
+
+EduDocs manages a vast repository of educational materials, including course syllabi, lecture notes, research papers, and administrative documents. These materials are often provided by clients in various formats, predominantly PDF, which poses challenges for content reuse, editing, and integration into digital platforms.
+
+Manually converting PDF documents to Markdown is time-consuming and prone to errors, especially when dealing with large volumes of documents. Additionally, ensuring that the converted Markdown adheres to consistent formatting standards is crucial for maintaining the professional quality of EduDocs' deliverables.
+
+To address these challenges, EduDocs aims to automate and standardize the conversion of PDF documents to Markdown format, ensuring that all Markdown files are consistently formatted using Prettier 3.4.2. This initiative will improve efficiency, reduce manual effort, and enhance the overall quality of the documentation provided to clients.
+
+Your Task
+As part of the Documentation Transformation Project, you are a junior developer at EduDocs tasked with developing a streamlined workflow for converting PDF files to Markdown and ensuring their consistent formatting. This project is critical for supporting EduDocs' commitment to delivering high-quality, accessible educational resources to its clients.
+
+q-pdf-to-markdown.pdf has the contents of a sample document.
+
+Convert the PDF to Markdown: Extract the content from the PDF file. Accurately convert the extracted content into Markdown format, preserving the structure and formatting as much as possible.
+Format the Markdown: Use Prettier version 3.4.2 to format the converted Markdown file.
+Submit the Formatted Markdown: Provide the final, formatted Markdown file as your submission.
+Impact
+By completing this exercise, you will contribute to EduDocs Inc.'s mission of providing high-quality, accessible educational resources. Automating the PDF to Markdown conversion and ensuring consistent formatting:
+
+Enhances Productivity: Reduces the time and effort required to prepare documentation for clients.
+Improves Quality: Ensures all documents adhere to standardized formatting, enhancing readability and professionalism.
+Supports Scalability: Enables EduDocs to handle larger volumes of documentation without compromising on quality.
+Facilitates Integration: Makes it easier to integrate Markdown-formatted documents into various digital platforms and content management systems.
+What is the markdown content of the PDF, formatted with prettier@3.4.2?

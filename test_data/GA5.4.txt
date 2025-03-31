@@ -1,0 +1,28 @@
+s-anand.net is a personal website that had region-specific music content. One of the site's key sections is hindimp3, which hosts music files and is especially popular among the local audience. The website is powered by robust Apache web servers that record detailed access logs. These logs are essential for understanding user behavior, server load, and content engagement.
+
+By analyzing the server’s Apache log file, the author can identify heavy users and take measures to manage bandwidth, improve site performance, or even investigate potential abuse.
+
+Your Task
+This GZipped Apache log file (61MB) has 258,074 rows. Each row is an Apache web log entry for the site s-anand.net in May 2024.
+
+Each row has these fields:
+
+IP: The IP address of the visitor
+Remote logname: The remote logname of the visitor. Typically "-"
+Remote user: The remote user of the visitor. Typically "-"
+Time: The time of the visit. E.g. [01/May/2024:00:00:00 +0000]. Not that this is not quoted and you need to handle this.
+Request: The request made by the visitor. E.g. GET /blog/ HTTP/1.1. It has 3 space-separated parts, namely (a) Method: The HTTP method. E.g. GET (b) URL: The URL visited. E.g. /blog/ (c) Protocol: The HTTP protocol. E.g. HTTP/1.1
+Status: The HTTP status code. If 200 <= Status < 300 it is a successful request
+Size: The size of the response in bytes. E.g. 1234
+Referer: The referer URL. E.g. https://s-anand.net/
+User agent: The browser used. This will contain spaces and might have escaped quotes.
+Vhost: The virtual host. E.g. s-anand.net
+Server: The IP address of the server.
+The fields are separated by spaces and quoted by double quotes ("). Unlike CSV files, quoted fields are escaped via \" and not "". (This impacts 41 rows.)
+
+All data is in the GMT-0500 timezone and the questions are based in this same timezone.
+
+Filter the Log Entries: Extract only the requests where the URL starts with /hindimp3/. Include only those requests made on the specified 2024-05-18.
+Aggregate Data by IP: Sum the "Size" field for each unique IP address from the filtered entries.
+Identify the Top Data Consumer: Determine the IP address that has the highest total downloaded bytes. Reports the total number of bytes that this IP address downloaded.
+Across all requests under hindimp3/ on 2024-05-18, how many bytes did the top IP address (by volume of downloads) download?

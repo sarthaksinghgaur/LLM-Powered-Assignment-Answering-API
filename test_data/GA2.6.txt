@@ -1,0 +1,8 @@
+Download this q-vercel-python.json which has the marks of 100 imaginary students.
+
+Create and deploy a Python app to Vercel. Expose an API so that when a request like https://your-app.vercel.app/api?name=X&name=Y is made, it returns a JSON response with the marks of the names X and Y in the same order, like this:
+
+{ "marks": [10, 20] }
+Make sure you enable CORS to allow GET requests from any origin.
+
+What is the Vercel URL? It should look like: https://your-app.vercel.app/api

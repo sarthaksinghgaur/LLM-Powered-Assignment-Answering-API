@@ -1,0 +1,27 @@
+CodeConnect is an innovative recruitment platform that specializes in matching high-potential tech talent with forward-thinking companies. As the demand for skilled software developers grows, CodeConnect is committed to staying ahead of trends by leveraging data-driven insights to identify emerging developers—especially those who demonstrate strong community influence on platforms like GitHub.
+
+For CodeConnect, a key objective is to tap into regional talent pools to support local hiring initiatives and foster diversity within tech teams. One specific challenge is identifying developers in major tech hubs (such as Shanghai) who not only have established GitHub profiles but also show early signs of influence, as indicated by their follower counts.
+
+However, with millions of developers on GitHub and constantly evolving profiles, manually filtering through the data is impractical. CodeConnect needs an automated solution that:
+
+Filters Developer Profiles: Retrieves GitHub users based on location and a minimum follower threshold (e.g., over 60 followers) to focus on those with some level of social proof.
+Identifies the Newest Talent: Determines the most recent GitHub user in the selected group, providing insight into new emerging talent.
+Standardizes Data: Returns the account creation date in a standardized ISO 8601 format, ensuring consistent reporting across the organization.
+The recruitment team at CodeConnect is launching a new initiative aimed at hiring young, promising developers in Shanghai—a city known for its vibrant tech community. To support this initiative, the team has commissioned a project to use the GitHub API to find all users located in Shanghai with more than 60 followers. From this filtered list, they need to identify the newest account based on the profile creation date. This information will help the team target outreach efforts to developers who have recently joined the platform and may be eager to explore new career opportunities.
+
+Your Task
+Using the GitHub API, find all users located in the city Singapore with over 190 followers.
+
+When was the newest user's GitHub profile created?
+
+API Integration and Data Retrieval: Leverage GitHub’s search endpoints to query users by location and filter them by follower count.
+Data Processing: From the returned list of GitHub users, isolate those profiles that meet the specified criteria.
+Sort and Format: Identify the "newest" user by comparing the created_at dates provided in the user profile data. Format the account creation date in the ISO 8601 standard (e.g., "2024-01-01T00:00:00Z").
+Impact
+By automating this data retrieval and filtering process, CodeConnect gains several strategic advantages:
+
+Targeted Recruitment: Quickly identify new, promising talent in key regions, allowing for more focused and timely recruitment campaigns.
+Competitive Intelligence: Stay updated on emerging trends within local developer communities and adjust talent acquisition strategies accordingly.
+Efficiency: Automating repetitive data collection tasks frees up time for recruiters to focus on engagement and relationship-building.
+Data-Driven Decisions: Leverage standardized and reliable data to support strategic business decisions in recruitment and market research.
+Enter the date (ISO 8601, e.g. "2024-01-01T00:00:00Z") when the newest user joined GitHub.

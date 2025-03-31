@@ -1,0 +1,3 @@
+Download q-move-rename-files.zip and extract it. Use mv to move all files under folders into an empty folder. Then rename all files replacing each digit with the next. 1 becomes 2, 9 becomes 0, a1b9c.txt becomes a2b0c.txt.
+
+What does running grep . * | LC_ALL=C sort | sha256sum in bash on that folder show?

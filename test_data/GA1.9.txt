@@ -1,0 +1,4 @@
+Let's make sure you know how to use JSON. Sort this JSON array of objects by the value of the age field. In case of a tie, sort by the name field. Paste the resulting JSON below without any spaces or newlines.
+
+[{"name":"Alice","age":60},{"name":"Bob","age":43},{"name":"Charlie","age":28},{"name":"David","age":71},{"name":"Emma","age":51},{"name":"Frank","age":41},{"name":"Grace","age":98},{"name":"Henry","age":7},{"name":"Ivy","age":71},{"name":"Jack","age":74},{"name":"Karen","age":83},{"name":"Liam","age":81},{"name":"Mary","age":86},{"name":"Nora","age":86},{"name":"Oscar","age":5},{"name":"Paul","age":48}]
+Sorted JSON:

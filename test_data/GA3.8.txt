@@ -1,0 +1,56 @@
+TechNova Corp. is a multinational corporation that has implemented a digital assistant to support employees with various internal tasks. The assistant can answer queries related to human resources, IT support, and administrative services. Employees use a simple web interface to enter their requests, which may include:
+
+Checking the status of an IT support ticket.
+Scheduling a meeting.
+Retrieving their current expense reimbursement balance.
+Requesting details about their performance bonus.
+Reporting an office issue by specifying a department or issue number.
+Each question is direct and templatized, containing one or more parameters such as an employee or ticket number (which might be randomized). In the backend, a FastAPI app routes each request by matching the query to one of a set of pre-defined functions. The response that the API returns is used by OpenAI to call the right function with the necessary arguments.
+
+Pre-Defined Functions:
+
+For this exercise, assume the following functions have been defined:
+
+get_ticket_status(ticket_id: int)
+schedule_meeting(date: str, time: str, meeting_room: str)
+get_expense_balance(employee_id: int)
+calculate_performance_bonus(employee_id: int, current_year: int)
+report_office_issue(issue_code: int, department: str)
+Each function has a specific signature, and the student’s FastAPI app should map specific queries to these functions.
+
+Example Questions (Templatized with a Random Number):
+
+Ticket Status:
+Query: "What is the status of ticket 83742?"
+→ Should map to get_ticket_status(ticket_id=83742)
+Meeting Scheduling:
+Query: "Schedule a meeting on 2025-02-15 at 14:00 in Room A."
+→ Should map to schedule_meeting(date="2025-02-15", time="14:00", meeting_room="Room A")
+Expense Reimbursement:
+Query: "Show my expense balance for employee 10056."
+→ Should map to get_expense_balance(employee_id=10056)
+Performance Bonus Calculation:
+Query: "Calculate performance bonus for employee 10056 for 2025."
+→ Should map to calculate_performance_bonus(employee_id=10056, current_year=2025)
+Office Issue Reporting:
+Query: "Report office issue 45321 for the Facilities department."
+→ Should map to report_office_issue(issue_code=45321, department="Facilities")
+Task Overview:
+
+Develop a FastAPI application that:
+
+Exposes a GET endpoint /execute?q=... where the query parameter q contains one of the pre-templatized questions.
+Analyzes the q parameter to identify which function should be called.
+Extracts the parameters from the question text.
+Returns a response in the following JSON format:
+
+{ "name": "function_name", "arguments": "{ ...JSON encoded parameters... }" }
+For example, the query "What is the status of ticket 83742?" should return:
+
+{
+  "name": "get_ticket_status",
+  "arguments": "{\"ticket_id\": 83742}"
+}
+Make sure you enable CORS to allow GET requests from any origin.
+
+What is the API URL endpoint for your implementation? It might look like: http://127.0.0.1:8000/execute

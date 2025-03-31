@@ -1,0 +1,21 @@
+TechInsight Analytics is a leading market research firm specializing in technology trends and media intelligence. The company provides actionable insights to tech companies, startups, and investors by analyzing online discussions, news articles, and social media posts. One of their key data sources is Hacker News, a popular platform where tech enthusiasts and professionals share and discuss the latest in technology, startups, and innovation.
+
+In the rapidly evolving tech landscape, staying updated with the latest trends and public sentiments is crucial for TechInsight Analytics' clients. Manual monitoring of Hacker News posts for specific topics and engagement levels is inefficient and error-prone due to the high volume of daily posts. To address this, TechInsight seeks to automate the process of identifying and extracting relevant Hacker News posts that mention specific technology topics and have garnered significant attention (measured by points).
+
+TechInsight Analytics has developed an internal tool that leverages the HNRSS API to fetch the latest Hacker News posts. The tool needs to perform the following tasks:
+
+Topic Monitoring: Continuously monitor Hacker News for posts related to specific technology topics, such as "Artificial Intelligence," "Blockchain," or "Cybersecurity."
+Engagement Filtering: Identify posts that have received a minimum number of points (votes) to ensure the content is highly engaging and relevant.
+Data Extraction: Extract essential details from the qualifying posts, including the post's link for further analysis and reporting.
+To achieve this, the team needs to create a program that:
+
+Searches Hacker News for the latest posts mentioning a specified topic.
+Filters these posts based on a minimum points threshold.
+Retrieves and returns the link to the most relevant post.
+Your Task
+Search using the Hacker News RSS API for the latest Hacker News post mentioning Bootstrapping and having a minimum of 55 points. What is the link that it points to?
+
+Automate Data Retrieval: Utilize the HNRSS API to fetch the latest Hacker News posts. Use the URL relevant to fetching the latest posts, searching for topics and filtering by a minimum number of points.
+Extract and Present Data: Extract the most recent <item> from this result. Get the <link> tag inside it.
+Share the result: Type in just the URL in the answer.
+What is the link to the latest Hacker News post mentioning Bootstrapping having at least 55 points?

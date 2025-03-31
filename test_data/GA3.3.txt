@@ -1,0 +1,15 @@
+RapidRoute Solutions is a logistics and delivery company that relies on accurate and standardized address data to optimize package routing. Recently, they encountered challenges with manually collecting and verifying new addresses for testing their planning software. To overcome this, the company decided to create an automated address generator using a language model, which would provide realistic, standardized U.S. addresses that could be directly integrated into their system.
+
+The engineering team at RapidRoute is tasked with designing a service that uses OpenAI's GPT-4o-Mini model to generate fake but plausible address data. The addresses must follow a strict format, which is critical for downstream processes such as geocoding, routing, and verification against customer databases. For consistency and validation, the development team requires that the addresses be returned as structured JSON data with no additional properties that could confuse their parsers.
+
+As part of the integration process, you need to write the body of the request to an OpenAI chat completion call that:
+
+Uses model gpt-4o-mini
+Has a system message: Respond in JSON
+Has a user message: Generate 10 random addresses in the US
+Uses structured outputs to respond with an object addresses which is an array of objects with required fields: longitude (number) latitude (number) street (string) .
+Sets additionalProperties to false to prevent additional properties.
+Note that you don't need to run the request or use an API key; your task is simply to write the correct JSON body.
+
+What is the JSON body we should send to https://api.openai.com/v1/chat/completions for this? (No need to run it or to use an API key. Just write the body of the request below.)
+There's no answer box above. Figure out how to enable it. That's part of the test.

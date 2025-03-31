@@ -1,0 +1,19 @@
+Acme Global Solutions manages hundreds of invoices from vendors every month. To streamline their accounts payable process, the company is developing an automated document processing system. This system uses a computer vision model to extract useful text from scanned invoice images. Critical pieces of data such as vendor email addresses, invoice or transaction numbers, and other details are embedded within these documents.
+
+Your team is tasked with integrating OpenAI's vision model into the invoice processing workflow. The chosen model, gpt-4o-mini, is capable of analyzing both text and image inputs simultaneously. When an invoice is received—for example, an invoice image may contain a vendor email like alice.brown@acmeglobal.com and a transaction number such as 34921. The system needs to extract all embedded text to automatically populate the vendor management system.
+
+The automated process will send a POST request to OpenAI's API with two inputs in a single user message:
+
+Text: A simple instruction "Extract text from this image."
+Image URL: A base64 URL representing the invoice image that might include the email and the transaction number among other details.
+Here is an example invoice image:
+
+
+
+Write just the JSON body (not the URL, nor headers) for the POST request that sends these two pieces of content (text and image URL) to the OpenAI API endpoint.
+
+Use gpt-4o-mini as the model.
+Send a single user message to the model that has a text and an image_url content (in that order).
+The text content should be Extract text from this image.
+Send the image_url as a base64 URL of the image above. CAREFUL: Do not modify the image.
+Write your JSON body here:

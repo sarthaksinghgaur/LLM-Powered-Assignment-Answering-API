@@ -1,0 +1,29 @@
+InfoCore Solutions is a technology consulting firm that maintains an extensive internal knowledge base of technical documents, project reports, and case studies. Employees frequently search through these documents to answer client questions quickly or gain insights for ongoing projects. However, due to the sheer volume of documentation, traditional keyword-based search often returns too many irrelevant results.
+
+To address this issue, InfoCore's data science team decides to integrate a semantic search feature into their internal portal. This feature uses text embeddings to capture the contextual meaning of both the documents and the user's query. The documents are pre-embedded, and when an employee submits a search query, the system computes the similarity between the query's embedding and those of the documents. The API then returns a ranked list of document identifiers based on similarity.
+
+Imagine you are an engineer on the InfoCore team. Your task is to build a FastAPI POST endpoint that accepts an array of docs and query string via a JSON body. The endpoint is structured as follows:
+
+POST /similarity
+
+{
+  "docs": ["Contents of document 1", "Contents of document 2", "Contents of document 3", ...],
+  "query": "Your query string"
+}
+Service Flow:
+
+Request Payload: The client sends a POST request with a JSON body containing:
+docs: An array of document texts from the internal knowledge base.
+query: A string representing the user's search query.
+Embedding Generation: For each document in the docs array and for the query string, the API computes a text embedding using text-embedding-3-small.
+Similarity Computation: The API then calculates the cosine similarity between the query embedding and each document embedding. This allows the service to determine which documents best match the intent of the query.
+Response Structure: After ranking the documents by their similarity scores, the API returns the identifiers (or positions) of the three most similar documents. The JSON response might look like this:
+
+{
+  "matches": ["Contents of document 3", "Contents of document 1", "Contents of document 2"]
+}
+Here, "Contents of document 3" is considered the closest match, followed by "Contents of document 1", then "Contents of document 2".
+
+Make sure you enable CORS to allow OPTIONS and POST methods, perhaps allowing all origins and headers.
+
+What is the API URL endpoint for your implementation? It might look like: http://127.0.0.1:8000/similarity

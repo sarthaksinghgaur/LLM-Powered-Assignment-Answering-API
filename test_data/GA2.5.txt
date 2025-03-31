@@ -1,0 +1,15 @@
+Download this image. Create a new Google Colab notebook and run this code (after fixing a mistake in it) to calculate the number of pixels with a certain minimum brightness:
+
+import numpy as np
+from PIL import Image
+from google.colab import files
+import colorsys
+
+# There is a mistake in the line below. Fix it
+image = Image.open(list(files.upload().keys)[0])
+
+rgb = np.array(image) / 255.0
+lightness = np.apply_along_axis(lambda x: colorsys.rgb_to_hls(*x)[1], 2, rgb)
+light_pixels = np.sum(lightness > 0.179)
+print(f'Number of pixels with lightness > 0.179: {light_pixels}')
+What is the result? (It should be a number)

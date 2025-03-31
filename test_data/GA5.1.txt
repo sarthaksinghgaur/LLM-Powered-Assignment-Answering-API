@@ -1,0 +1,40 @@
+RetailWise Inc. is a retail analytics firm that supports companies in optimizing their pricing, margins, and inventory decisions. Their reports depend on accurate historical sales data, but legacy data sources are often messy. Recently, RetailWise received an Excel sheet containing 1,000 transaction records that were generated from scanned receipts. Due to OCR inconsistencies and legacy formatting issues, the data in the Excel sheet is not clean.
+
+The Excel file has these columns, and they are messy:
+
+Customer Name: Contains leading/trailing spaces.
+Country: Uses inconsistent representations. Instead of 2-letter abbreviations, it also contains other values like "USA" vs. "US", "UK" vs. "U.K", "Fra" for France, "Bra" for Brazil, "Ind" for India.
+Date: Uses mixed formats like "MM-DD-YYYY", "YYYY/MM/DD", etc.
+Product: Includes a product name followed by a slash and a random code (e.g., "Theta/5x01vd"). Only the product name part (before the slash) is relevant.
+Sales and Cost: Contain extra spaces and the currency string ("USD"). In some rows, the Cost field is missing. When the cost is missing, it should be treated as 50% of the Sales value.
+TransactionID: Though formatted as four-digit numbers, this field may have inconsistent spacing.
+Your Task
+You need to clean this Excel data and calculate the total margin for all transactions that satisfy the following criteria:
+
+Time Filter: Sales that occurred up to and including a specified date (Thu May 05 2022 07:40:33 GMT+0530 (India Standard Time)).
+Product Filter: Transactions for a specific product (Gamma). (Use only the product name before the slash.)
+Country Filter: Transactions from a specific country (UK), after standardizing the country names.
+The total margin is defined as:
+
+Total Margin
+=
+Total Sales
+−
+Total Cost
+Total Sales
+Your solution should address the following challenges:
+
+Trim and Normalize Strings: Remove extra spaces from the Customer Name and Country fields. Map inconsistent country names (e.g., "USA", "U.S.A", "US") to a standardized format.
+Standardize Date Formats: Detect and convert dates from "MM-DD-YYYY" and "YYYY/MM/DD" into a consistent date format (e.g., ISO 8601).
+Extract the Product Name: From the Product field, extract the portion before the slash (e.g., extract "Theta" from "Theta/5x01vd").
+Clean and Convert Sales and Cost: Remove the "USD" text and extra spaces from the Sales and Cost fields. Convert these fields to numerical values. Handle missing Cost values appropriately (50% of Sales).
+Filter the Data: Include only transactions up to and including Thu May 05 2022 07:40:33 GMT+0530 (India Standard Time), matching product Gamma, and country UK.
+Calculate the Margin: Sum the Sales and Cost for the filtered transactions. Compute the overall margin using the formula provided.
+By cleaning the data and calculating accurate margins, RetailWise Inc. can:
+
+Improve Decision Making: Provide clients with reliable margin analyses to optimize pricing and inventory.
+Enhance Reporting: Ensure historical data is consistent and accurate, boosting stakeholder confidence.
+Streamline Operations: Reduce the manual effort needed to clean data from legacy sources.
+Download the Sales Excel file: q-clean-up-excel-sales-data.xlsx
+
+What is the total margin for transactions before Thu May 05 2022 07:40:33 GMT+0530 (India Standard Time) for Gamma sold in UK (which may be spelt in different ways)?

@@ -1,0 +1,36 @@
+GlobalEdu Platforms is a leading provider of educational technology solutions, specializing in creating interactive and informative content for students and educators worldwide. Their suite of products includes digital textbooks, educational apps, and online learning platforms that aim to make learning more engaging and accessible. To enhance their offerings, GlobalEdu Platforms seeks to integrate comprehensive country information into their educational tools, enabling users to access structured and easily navigable content about various nations.
+
+With the vast amount of information available on platforms like Wikipedia, manually curating and organizing country-specific data for educational purposes is both time-consuming and inefficient. GlobalEdu Platforms aims to automate this process to ensure that their educational materials are up-to-date, accurate, and well-structured. The key challenges they face include:
+
+Content Organization: Presenting information in a structured and hierarchical manner that aligns with educational standards.
+Scalability: Handling data for a large number of countries without manual intervention.
+Accessibility: Ensuring that the information is easily accessible from various applications and platforms used by educators and students.
+Interoperability: Allowing cross-origin requests to integrate the API seamlessly with different front-end applications.
+To address these challenges, GlobalEdu Platforms has decided to develop a web application that exposes a RESTful API. This API will allow their educational tools to fetch and display structured outlines of Wikipedia pages for any given country. The application needs to:
+
+Accept a country name as a query parameter.
+Fetch the corresponding Wikipedia page for that country.
+Extract all headings (H1 to H6) from the page.
+Generate a Markdown-formatted outline that reflects the hierarchical structure of the content.
+Enable Cross-Origin Resource Sharing (CORS) to allow GET requests from any origin, facilitating seamless integration with various educational platforms.
+Your Task
+Write a web application that exposes an API with a single query parameter: ?country=. It should fetch the Wikipedia page of the country, extracts all headings (H1 to H6), and create a Markdown outline for the country. The outline should look like this:
+
+
+## Contents
+
+# Vanuatu
+
+## Etymology
+
+## History
+
+### Prehistory
+
+...
+API Development: Choose any web framework (e.g., FastAPI) to develop the web application. Create an API endpoint (e.g., /api/outline) that accepts a country query parameter.
+Fetching Wikipedia Content: Find out the Wikipedia URL of the country and fetch the page's HTML.
+Extracting Headings: Use an HTML parsing library (e.g., BeautifulSoup, lxml) to parse the fetched Wikipedia page. Extract all headings (H1 to H6) from the page, maintaining order.
+Generating Markdown Outline: Convert the extracted headings into a Markdown-formatted outline. Headings should begin with #.
+Enabling CORS: Configure the web application to include appropriate CORS headers, allowing GET requests from any origin.
+What is the URL of your API endpoint?

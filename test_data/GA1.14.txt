@@ -1,0 +1,3 @@
+Download q-replace-across-files.zip and unzip it into a new folder, then replace all "IITM" (in upper, lower, or mixed case) with "IIT Madras" in all files. Leave everything as-is - don't change the line endings.
+
+What does running cat * | sha256sum in that folder show in bash?

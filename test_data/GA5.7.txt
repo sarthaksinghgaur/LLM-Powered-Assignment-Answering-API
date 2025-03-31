@@ -1,0 +1,24 @@
+DataSure Technologies is a leading provider of IT infrastructure and software solutions, known for its robust systems and proactive maintenance practices. As part of their service offerings, DataSure collects extensive logs from thousands of servers and applications worldwide. These logs, stored in JSON format, are rich with information about system performance, error events, and user interactions. However, the logs are complex and deeply nested, which can make it challenging to quickly identify recurring issues or anomalous behavior.
+
+Recently, DataSure's operations team observed an increase in system alerts and minor anomalies reported by their monitoring tools. To diagnose these issues more effectively, the team needs to perform a detailed analysis of the log files. One critical step is to count how often a specific key (e.g., "errorCode", "criticalFlag", or any other operational parameter represented by KYUF) appears in the log entries.
+
+Key considerations include:
+
+Complex Structure: The log files are large and nested, with multiple levels of objects and arrays. The target key may appear at various depths.
+Key vs. Value: The key may also appear as a value within the logs, but only occurrences where it is a key should be counted.
+Operational Impact: Identifying the frequency of this key can help pinpoint common issues, guide system improvements, and inform maintenance strategies.
+Your Task
+As a data analyst at DataSure Technologies, you have been tasked with developing a script that processes a large JSON log file and counts the number of times a specific key, represented by the placeholder KYUF, appears in the JSON structure. Your solution must:
+
+Parse the Large, Nested JSON: Efficiently traverse the JSON structure regardless of its complexity.
+Count Key Occurrences: Increment a count only when KYUF is used as a key in the JSON object (ignoring occurrences of KYUF as a value).
+Return the Count: Output the total number of occurrences, which will be used by the operations team to assess the prevalence of particular system events or errors.
+By accurately counting the occurrences of a specific key in the log files, DataSure Technologies can:
+
+Diagnose Issues: Quickly determine the frequency of error events or specific system flags that may indicate recurring problems.
+Prioritize Maintenance: Focus resources on addressing the most frequent issues as identified by the key count.
+Enhance Monitoring: Improve automated monitoring systems by correlating key occurrence data with system performance metrics.
+Inform Decision-Making: Provide data-driven insights that support strategic planning for system upgrades and operational improvements.
+Download the data from q-extract-nested-json-keys.json
+
+How many times does KYUF appear as a key?

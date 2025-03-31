@@ -1,0 +1,13 @@
+Q3 -> not working according to me
+Q10 -> needs to check again
+
+Q23 -> own site
+Q26 -> diiferent url for everyone, need to check for a central solution
+
+Q24 -> own colab token
+Q26 -> diiferent url for everyone, need to check for a central solution
+Q27 -> git repo clone with workflow
+Q28 -> own docker image with tag
+Q210 -> keep it running
+Q37 -> own token
+Q38 -> own token

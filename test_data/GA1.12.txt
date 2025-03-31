@@ -1,0 +1,8 @@
+Download and process the files in q-unicode-data.zip which contains three files with different encodings:
+
+data1.csv: CSV file encoded in CP-1252
+data2.csv: CSV file encoded in UTF-8
+data3.txt: Tab-separated file encoded in UTF-16
+Each file has 2 columns: symbol and value. Sum up all the values where the symbol matches Ÿ OR € OR • across all three files.
+
+What is the sum of all values associated with these symbols?

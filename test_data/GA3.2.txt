@@ -1,0 +1,12 @@
+LexiSolve Inc. is a startup that delivers a conversational AI platform to enterprise clients. The system leverages OpenAI’s language models to power a variety of customer service, sentiment analysis, and data extraction features. Because pricing for these models is based on the number of tokens processed—and strict token limits apply—accurate token accounting is critical for managing costs and ensuring system stability.
+
+To optimize operational costs and prevent unexpected API overages, the engineering team at LexiSolve has developed an internal diagnostic tool that simulates and measures token usage for typical prompts sent to the language model.
+
+One specific test case an understanding of text tokenization. Your task is to generate data for that test case.
+
+Specifically, when you make a request to OpenAI's GPT-4o-Mini with just this user message:
+
+List only the valid English words from these: zrS, tzVUo9HY, plOc1AQ, Le4Lx, SE9Ut7, VSFRkb, QyOPBsMd, L, rtXWru, n5s9F, vAr, uS8q, P2VGEinT, wm, fDP9, 81779a, 6t, 93xKc1n, J8ot2Q, fR4, gx, ew5G1Ml, ovZkzYjtd, I1E, jFDW, fdfr, ry
+... how many input tokens does it use up?
+
+Number of tokens:

@@ -1,0 +1,16 @@
+Write documentation in Markdown for an **imaginary** analysis of the number of steps you walked each day for a week, comparing over time and with friends. The Markdown must include:
+
+Top-Level Heading: At least 1 heading at level 1, e.g., # Introduction
+Subheadings: At least 1 heading at level 2, e.g., ## Methodology
+Bold Text: At least 1 instance of bold text, e.g., **important**
+Italic Text: At least 1 instance of italic text, e.g., *note*
+Inline Code: At least 1 instance of inline code, e.g., sample_code
+Code Block: At least 1 instance of a fenced code block, e.g.
+
+print("Hello World")
+Bulleted List: At least 1 instance of a bulleted list, e.g., - Item
+Numbered List: At least 1 instance of a numbered list, e.g., 1. Step One
+Table: At least 1 instance of a table, e.g., | Column A | Column B |
+Hyperlink: At least 1 instance of a hyperlink, e.g., [Text](https://example.com)
+Image: At least 1 instance of an image, e.g., ![Alt Text](https://example.com/image.jpg)
+Blockquote: At least 1 instance of a blockquote, e.g., > This is a quote

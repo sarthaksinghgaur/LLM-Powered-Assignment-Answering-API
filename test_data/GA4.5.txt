@@ -1,0 +1,27 @@
+UrbanRide is a leading transportation and logistics company operating in major metropolitan areas worldwide. To enhance their service efficiency, optimize route planning, and improve customer satisfaction, UrbanRide relies heavily on accurate geospatial data. Precise bounding box information of cities helps in defining service zones, managing fleet distribution, and analyzing regional demand patterns.
+
+As UrbanRide expands into new cities, the company faces the challenge of accurately delineating service areas within these urban environments. Defining the geographical boundaries of a city is crucial for:
+
+Route Optimization: Ensuring drivers operate within designated zones to minimize transit times and fuel consumption.
+Fleet Management: Allocating vehicles effectively across different regions based on demand and service coverage.
+Market Analysis: Understanding regional demand to tailor services and promotional efforts accordingly.
+However, manually extracting and verifying bounding box data for each city is time-consuming and prone to inconsistencies, especially when dealing with cities that share names across different countries or have multiple administrative districts.
+
+UrbanRide’s data analytics team needs to automate the extraction of precise bounding box coordinates (specifically the minimum and maximum latitude) for various populous cities across different countries. This automation ensures consistency, accuracy, and scalability as the company grows its operations.
+
+To achieve this, the team utilizes the Nominatim API, a geocoding service based on OpenStreetMap data, to programmatically retrieve geospatial information. However, challenges arise when cities with the same name exist in multiple countries or have multiple entries within the same country. To address this, the team must implement a method to select the correct city instance based on specific identifiers (e.g., osm_id patterns).
+
+Your Task
+What is the minimum latitude of the bounding box of the city Buenos Aires in the country Argentina on the Nominatim API?
+
+API Integration: Use the Nominatim API to fetch geospatial data for a specified city within a country via a GET request to the Nominatim API with parameters for the city and country. Ensure adherence to Nominatim’s usage policies, including rate limiting and proper attribution.
+Data Retrieval and Filtering: Parse the JSON response from the API. If multiple results are returned (e.g., multiple cities named “Springfield” in different states), filter the results based on the provided osm_id ending to select the correct city instance.
+Parameter Extraction: Access the boundingbox attribute. Depending on whether you're looking for the minimum or maximum latitude, extract the corresponding latitude value.
+Impact
+By automating the extraction and processing of bounding box data, UrbanRide can:
+
+Optimize Routing: Enhance route planning algorithms with precise geographical boundaries, reducing delivery times and operational costs.
+Improve Fleet Allocation: Allocate vehicles more effectively across defined service zones based on accurate city extents.
+Enhance Market Analysis: Gain deeper insights into regional performance, enabling targeted marketing and service improvements.
+Scale Operations: Seamlessly integrate new cities into their service network with minimal manual intervention, ensuring consistent data quality.
+What is the minimum latitude of the bounding box of the city Buenos Aires in the country Argentina on the Nominatim API? Value of the minimum latitude

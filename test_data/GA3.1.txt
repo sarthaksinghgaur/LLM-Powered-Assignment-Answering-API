@@ -1,0 +1,21 @@
+DataSentinel Inc. is a tech company specializing in building advanced natural language processing (NLP) solutions. Their latest project involves integrating an AI-powered sentiment analysis module into an internal monitoring dashboard. The goal is to automatically classify large volumes of unstructured feedback and text data from various sources as either GOOD, BAD, or NEUTRAL. As part of the quality assurance process, the development team needs to test the integration with a series of sample inputs—even ones that may not represent coherent text—to ensure that the system routes and processes the data correctly.
+
+Before rolling out the live system, the team creates a test harness using Python. The harness employs the httpx library to send POST requests to OpenAI's API. For this proof-of-concept, the team uses the dummy model gpt-4o-mini along with a dummy API key in the Authorization header to simulate real API calls.
+
+One of the test cases involves sending a sample piece of meaningless text:
+
+2 cnhNyOEZHMAjbqPkhU9hM5  S5y2andxGy NLDe ypezlG6T
+Write a Python program that uses httpx to send a POST request to OpenAI's API to analyze the sentiment of this (meaningless) text into GOOD, BAD or NEUTRAL. Specifically:
+
+Make sure you pass an Authorization header with dummy API key.
+Use gpt-4o-mini as the model.
+The first message must be a system message asking the LLM to analyze the sentiment of the text. Make sure you mention GOOD, BAD, or NEUTRAL as the categories.
+The second message must be exactly the text contained above.
+This test is crucial for DataSentinel Inc. as it validates both the API integration and the correctness of message formatting in a controlled environment. Once verified, the same mechanism will be used to process genuine customer feedback, ensuring that the sentiment analysis module reliably categorizes data as GOOD, BAD, or NEUTRAL. This reliability is essential for maintaining high operational standards and swift response times in real-world applications.
+
+Note: This uses a dummy httpx library, not the real one. You can only use:
+
+response = httpx.get(url, **kwargs)
+response = httpx.post(url, json=None, **kwargs)
+response.raise_for_status()
+response.json()

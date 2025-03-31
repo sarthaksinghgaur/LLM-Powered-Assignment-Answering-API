@@ -1,0 +1,55 @@
+PixelGuard Solutions is a digital forensics firm specializing in the recovery and analysis of visual evidence for law enforcement and corporate investigations. One of their recurring challenges involves reconstructing damaged or deliberately scrambled images to reveal hidden details critical to solving cases.
+
+In a recent investigation, law enforcement received an anonymous tip involving a scrambled image that appeared to contain sensitive information. The image had been deliberately cut into 25 (5x5) pieces and rearranged to obfuscate its content. Recovering the original image was essential for uncovering evidence related to the case.
+
+PixelGuard's forensic team extracted the scrambled pieces and obtained a mapping file that specifies the transformation from the original (row, col) positions to the new positions. However, the team now needs to reassemble the image according to this mapping to restore its original appearance.
+
+Your Task
+As a digital forensics analyst at PixelGuard Solutions, your task is to reconstruct the original image from its scrambled pieces. You are provided with:
+
+The 25 individual image pieces (put together as a single image).
+A mapping file detailing the original (row, col) position for each piece and its current (row, col) location.
+Your reconstructed image will be critical evidence in the investigation. Once assembled, the image must be uploaded to the secure case management system for further analysis by the investigative team.
+
+Understand the Mapping: Review the provided mapping file that shows how each piece's original coordinates (row, col) relate to its current scrambled position.
+Reassemble the Image: Using the mapping, reassemble the 5x5 grid of image pieces to reconstruct the original image. You may use an image processing library (e.g., Python's Pillow, ImageMagick, or a similar tool) to automate the reconstruction process.
+Output the Reconstructed Image: Save the reassembled image in a lossless format (e.g., PNG or WEBP). Upload the reconstructed image to the secure case management system as required by PixelGuard’s workflow.
+By accurately reconstructing the scrambled image, PixelGuard Solutions will:
+
+Reveal Critical Evidence: Provide investigators with a clear view of the original image, which may contain important details related to the case.
+Enhance Analytical Capabilities: Enable further analysis and digital enhancements that can lead to breakthroughs in the investigation.
+Maintain Chain of Custody: Ensure that the reconstruction process is documented and reliable, supporting the admissibility of the evidence in court.
+Improve Operational Efficiency: Demonstrate the effectiveness of automated image reconstruction techniques in forensic investigations.
+Here is the image. It is a 500x500 pixel image that has been cut into 25 (5x5) pieces:
+
+
+
+Here is the mapping of each piece:
+
+Original Row	Original Column	Scrambled Row	Scrambled Column
+2	1	0	0
+1	1	0	1
+4	1	0	2
+0	3	0	3
+0	1	0	4
+1	4	1	0
+2	0	1	1
+2	4	1	2
+4	2	1	3
+2	2	1	4
+0	0	2	0
+3	2	2	1
+4	3	2	2
+3	0	2	3
+3	4	2	4
+1	0	3	0
+2	3	3	1
+3	3	3	2
+4	4	3	3
+0	2	3	4
+3	1	4	0
+1	2	4	1
+1	3	4	2
+0	4	4	3
+4	0	4	4
+Upload the reconstructed image by moving the pieces from the scrambled position to the original position:

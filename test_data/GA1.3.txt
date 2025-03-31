@@ -1,0 +1,5 @@
+Let's make sure you know how to use npx and prettier.
+
+Download README.md . In the directory where you downloaded it, make sure it is called README.md, and run npx -y prettier@3.4.2 README.md | sha256sum.
+
+What is the output of the command?
