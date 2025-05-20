@@ -21,7 +21,6 @@ This project focuses on developing a robust backend system that:
 * Input validation and preprocessing for academic context.
 * Integration with OpenAI API or other LLM providers.
 * Dockerized for consistent and portable deployment.
-* Error handling, logging, and secure token-based access.
 
 ---
 
@@ -31,9 +30,8 @@ This project focuses on developing a robust backend system that:
 * **Flask / FastAPI**
 * **OpenAI API** (or alternative LLMs)
 * **Docker**
-* **Gunicorn + Nginx** (for production deployment)
+* **AWS EC2** (for production deployment)
 * **Postman** (for testing endpoints)
-* **Redis + Celery** (optional: for background job queueing)
 
 ---
 
@@ -82,8 +80,6 @@ docker build -t llm-assignment-api .
 docker run -d -p 5000:5000 --env-file .env llm-assignment-api
 ```
 
-Optional: You can add **Nginx** and **Gunicorn** for better scalability and performance in production.
-
 ---
 
 ## 📡 API Endpoints
@@ -110,22 +106,6 @@ Optional: You can add **Nginx** and **Gunicorn** for better scalability and perf
   "answer": "A stack follows LIFO (Last In First Out), while a queue follows FIFO (First In First Out)..."
 }
 ```
-
----
-
-## 📈 Future Enhancements
-
-* Add vector search and RAG (Retrieval-Augmented Generation) for document support.
-* User authentication and rate-limiting.
-* Web UI for interactive use.
-* Fine-tuned domain-specific LLMs.
-
----
-
-## 🧑‍💻 Author
-
-**Sarthak Singh Gaur**
-Modern Application Development | Data Science | Cybersecurity
 
 ---
 
