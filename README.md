@@ -111,4 +111,4 @@ docker run -d -p 5000:5000 --env-file .env llm-assignment-api
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
